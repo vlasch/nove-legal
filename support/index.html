@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nove Support</title>
+  <style>
+    :root {
+      --ink: #1d1b18;
+      --muted: #6f6a63;
+      --bg: #faf7f2;
+      --rule: #e7e1d8;
+      --accent: #c4502e;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    h1 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 36px;
+    }
+    h2 {
+      font-size: 19px;
+      margin: 40px 0 10px;
+      letter-spacing: -0.01em;
+    }
+    p { margin: 0 0 14px; }
+    .lead { font-size: 18px; color: #3a352f; }
+    .label { font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 40px 0 0;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 24px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f0ece5;
+        --muted: #9a948b;
+        --bg: #181613;
+        --rule: #2f2b26;
+        --accent: #e0744f;
+      }
+      .lead { color: #d8d2c9; }
+    }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0 0; }
+    .button { display: inline-block; padding: 12px 20px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink); font-weight: 600; }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .button:hover { text-decoration: none; opacity: .85; }
+    ul { padding-left: 20px; margin: 0 0 14px; }
+    li { margin: 0 0 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nove Support</h1>
+    <p class="updated">We usually reply within a few days</p>
+    <p class="lead">Questions, problems, or feedback? Email <a href="mailto:management@noverecipes.com">management@noverecipes.com</a>.</p>
+
+    <h2>I forgot my password</h2>
+    <p>On the sign-in screen, tap <span class="label">Forgot password?</span> and enter your email. You will get a link to choose a new one. If you signed up with Apple or Google, sign in with that button instead.</p>
+
+    <h2>How do I delete my account?</h2>
+    <p>Open the <span class="label">You</span> tab, tap the gear icon, then <span class="label">Delete account</span>. Your profile, recipes, photos, and activity are removed permanently.</p>
+
+    <h2>How do I report or block someone?</h2>
+    <p>Tap the <span class="label">&middot;&middot;&middot;</span> menu on a recipe, post, or profile and choose <span class="label">Report</span> or <span class="label">Block</span>. Blocked people's content no longer appears for you. We review every report.</p>
+
+    <h2>Privacy</h2>
+    <p>Read how we handle your data in our <a href="/privacy/">Privacy Policy</a>.</p>
+    <hr>
+    <footer>Nove &middot; Operated by Vladislavs Schalander &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/support/">Support</a></footer>
+  </main>
+</body>
+</html>
