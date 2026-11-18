@@ -3,90 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nove Recipes</title>
-  <style>
-    :root {
-      --ink: #1d1b18;
-      --muted: #6f6a63;
-      --bg: #faf7f2;
-      --rule: #e7e1d8;
-      --accent: #c4502e;
-    }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      font-size: 17px;
-    }
-    main {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-    h1 {
-      font-size: 30px;
-      line-height: 1.2;
-      margin: 0 0 4px;
-      letter-spacing: -0.02em;
-    }
-    .updated {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0 0 36px;
-    }
-    h2 {
-      font-size: 19px;
-      margin: 40px 0 10px;
-      letter-spacing: -0.01em;
-    }
-    p { margin: 0 0 14px; }
-    .lead { font-size: 18px; color: #3a352f; }
-    .label { font-weight: 600; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    hr {
-      border: 0;
-      border-top: 1px solid var(--rule);
-      margin: 40px 0 0;
-    }
-    footer {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 24px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --ink: #f0ece5;
-        --muted: #9a948b;
-        --bg: #181613;
-        --rule: #2f2b26;
-        --accent: #e0744f;
-      }
-      .lead { color: #d8d2c9; }
-    }
-    .links { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0 0; }
-    .button { display: inline-block; padding: 12px 20px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink); font-weight: 600; }
-    .button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .button:hover { text-decoration: none; opacity: .85; }
-    ul { padding-left: 20px; margin: 0 0 14px; }
-    li { margin: 0 0 6px; }
-  </style>
+  <title>Nove — recipes from people who actually cook them</title>
+  <meta name="description" content="Nove is an iPhone cookbook where home cooks share recipes, cook them step by step, and post what they made.">
+  <meta name="theme-color" content="#FAFAF7">
+  <meta property="og:title" content="Nove — recipes from people who actually cook them">
+  <meta property="og:description" content="Nove is an iPhone cookbook where home cooks share recipes, cook them step by step, and post what they made.">
+  <meta property="og:image" content="https://noverecipes.com/assets/img/carbonara.jpg">
+  <link rel="icon" type="image/svg+xml" href="/assets/fig.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/PlayfairDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <main>
-    <h1>Nove</h1>
-    <p class="updated">Recipes from home cooks</p>
-    <p class="lead">Nove is an iPhone app for sharing recipes, cooking them step by step, and posting what you made.</p>
-    <div class="links">
-      <a class="button primary" href="/privacy/">Privacy Policy</a>
-      <a class="button" href="/support/">Support</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Nove home">
+        <img src="/assets/fig.svg" alt="" width="30" height="30">
+        <span class="wordmark">Nove<span>.</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
     </div>
-    <hr>
-    <footer>Nove &middot; Operated by Vladislavs Schalander &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/support/">Support</a></footer>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow accent">A cookbook for iPhone</p>
+          <h1>Recipes from people who <em>actually</em> cook them.</h1>
+          <p class="lede">Nove is where home cooks share the dishes they make again and again, cook them step by step, and show what came out of their own kitchen.</p>
+          <p class="status">In testing &middot; coming to the App Store</p>
+        </div>
+        <div class="stack" aria-hidden="true">
+        <figure class="card">
+          <img src="/assets/img/shakshuka.jpg" alt="Spiced Shakshuka" width="900" height="737">
+          <figcaption><p class="t">Spiced Shakshuka</p><p class="b">by @elara</p></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="/assets/img/tonkotsu.jpg" alt="Tonkotsu Ramen" width="900" height="737">
+          <figcaption><p class="t">Tonkotsu Ramen</p><p class="b">by @noa</p></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="/assets/img/carbonara.jpg" alt="Spaghetti alla Carbonara" width="900" height="737">
+          <figcaption><p class="t">Spaghetti alla Carbonara</p><p class="b">by @elara</p></figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how">From someone's kitchen to yours.</h2>
+        <ol class="steps">
+          <li>
+            <span class="n">01</span>
+            <h3>Find</h3>
+            <p>Browse by cuisine, or type in what's already in your fridge and see what you can make. Allergy filters keep the feed safe for you.</p>
+          </li>
+          <li>
+            <span class="n">02</span>
+            <h3>Cook</h3>
+            <p>Cook Mode walks you through one step at a time, with the ingredient list a swipe away and portions that scale.</p>
+          </li>
+          <li>
+            <span class="n">03</span>
+            <h3>Share</h3>
+            <p>Post your make with a photo and your tweaks. It sits under the original recipe, so the next cook learns from yours.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="kitchen">
+      <div class="wrap">
+        <p class="eyebrow">On Nove now</p>
+        <h2 id="kitchen">What people are cooking.</h2>
+        <div class="gallery">
+        <figure>
+          <img src="/assets/img/green-curry.jpg" alt="Thai Green Curry" loading="lazy" width="900" height="737">
+          <figcaption>Thai Green Curry<span>Thai &middot; @elara</span></figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/bibimbap.jpg" alt="Korean Bibimbap" loading="lazy" width="900" height="737">
+          <figcaption>Korean Bibimbap<span>Korean &middot; @elara</span></figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/enchiladas.jpg" alt="Enchiladas Verdes" loading="lazy" width="900" height="737">
+          <figcaption>Enchiladas Verdes<span>Mexican &middot; @noa</span></figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/crepes.jpg" alt="Classic Cr&ecirc;pes" loading="lazy" width="900" height="737">
+          <figcaption>Classic Cr&ecirc;pes<span>French &middot; @elara</span></figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing" aria-labelledby="contact">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact">Questions, ideas, or want to try it early?</h2>
+          <p>Nove is made by one person in Sweden. Every email gets read.</p>
+        </div>
+        <a class="button" href="mailto:management@noverecipes.com">Email us</a>
+      </div>
+    </section>
   </main>
+  <footer class="site-foot">
+    <div class="wrap">
+      <span>&copy; 2026 Nove &middot; Vladislavs Schalander</span>
+      <nav aria-label="Footer">
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="mailto:management@noverecipes.com">management@noverecipes.com</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
