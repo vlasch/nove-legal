@@ -140,6 +140,50 @@ a:hover { color: var(--ink); }
 .closing .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px clamp(32px, 6vw, 80px); align-items: end; }
 .closing p { margin: 12px 0 0; max-width: 32em; }
 
+/* Makes: a recipe with the posts of people who cooked it (mirrors the app's MakeCard) */
+.makes-section .wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.makes-copy p:not(.eyebrow) { margin: 20px 0 0; max-width: 30em; }
+.thread { margin: 0; }
+.thread-recipe { display: flex; gap: 16px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--ink); }
+.thread-recipe img { width: 96px; height: 96px; object-fit: cover; border-radius: 10px; flex: none; }
+.thread-recipe .t { font-family: var(--serif); font-size: 22px; color: var(--ink); margin: 0 0 4px; line-height: 1.2; }
+.thread-recipe .b { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.makes { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; }
+.makes::before { content: ""; position: absolute; left: 11px; top: 0; bottom: 28px; border-left: 2px dotted var(--rule); }
+.make { position: relative; padding: 22px 0 20px; border-bottom: 1px solid var(--rule-soft); }
+.make::before { content: ""; position: absolute; left: -21px; top: 33px; width: 12px; border-top: 2px dotted var(--rule); }
+.who { display: flex; align-items: center; gap: 10px; }
+.av { width: 28px; height: 28px; border-radius: 50%; display: inline-grid; place-items: center; font-family: var(--serif); font-size: 15px; color: var(--ink); flex: none; }
+.av.paprika { background: var(--paprika-soft); color: var(--paprika-text); }
+.av.sage { background: var(--sage-soft); color: var(--sage); }
+.av.oat { background: var(--bg-alt); color: var(--ink-soft); }
+.who .h { font-weight: 500; color: var(--ink); font-size: 15px; }
+.who .when { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-left: auto; }
+.said { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.45; color: var(--ink-soft); margin: 12px 0 0; }
+.tweak { display: inline-block; margin: 12px 0 0; padding: 5px 9px; border-radius: 6px; background: var(--paprika-soft); color: var(--paprika-text); font-size: 14px; }
+.tweak b { font-weight: 600; }
+.verdict { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 12px 0 0; }
+.thread figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--muted); margin-top: 14px; }
+
+/* Allergens and calories */
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); margin-top: clamp(32px, 5vw, 48px); }
+.panel h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; color: var(--ink); margin: 0 0 8px; letter-spacing: -0.01em; }
+.panel > p { margin: 0 0 24px; max-width: 32em; }
+.checklist, .kcal { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.checklist li { display: flex; align-items: center; gap: 14px; min-height: 52px; border-bottom: 1px solid var(--rule); color: var(--ink); font-size: 17px; }
+.checklist .box { width: 18px; height: 18px; border: 1.5px solid var(--ink-soft); border-radius: 3px; flex: none; position: relative; }
+.checklist .on .box { background: var(--paprika); border-color: var(--paprika); }
+.checklist .on .box::after { content: ""; position: absolute; left: 5px; top: 1px; width: 5px; height: 10px; border: solid var(--bg); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.checklist .state { margin-left: auto; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.checklist .on .state { color: var(--paprika-text); }
+.kcal li { display: flex; align-items: baseline; gap: 12px; min-height: 52px; padding: 15px 0 13px; border-bottom: 1px solid var(--rule); }
+.kcal .k { color: var(--ink); font-size: 17px; flex: none; }
+.kcal .dots { flex: 1; min-width: 16px; border-bottom: 2px dotted var(--rule); transform: translateY(-4px); }
+.kcal .v { font-family: var(--mono); font-size: 14px; color: var(--ink-soft); flex: none; }
+.kcal .total { border-bottom: 1px solid var(--ink); }
+.kcal .total .k { font-weight: 600; }
+.kcal .total .v { color: var(--paprika-text); font-weight: 500; }
+
 /* Footer */
 .site-foot { border-top: 1px solid var(--rule); padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
 .site-foot .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
@@ -203,6 +247,8 @@ a:hover { color: var(--ink); }
   .steps { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .closing .wrap { grid-template-columns: 1fr; }
+  .makes-section .wrap { grid-template-columns: 1fr; }
+  .panels { grid-template-columns: 1fr; }
   .doc .wrap { grid-template-columns: minmax(0, var(--read)); }
   .doc .wrap { grid-template-rows: auto; }
   .doc header { grid-column: 1; grid-row: 1; }
